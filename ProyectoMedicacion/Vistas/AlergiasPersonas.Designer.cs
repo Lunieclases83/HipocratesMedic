@@ -44,7 +44,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtFiltrarBusqueda = new System.Windows.Forms.TextBox();
             this.TablaAlergiasPersona = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.buttonAgregarComponente = new System.Windows.Forms.Button();
@@ -198,7 +198,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.txtFiltrarBusqueda);
             this.groupBox3.Controls.Add(this.TablaAlergiasPersona);
             this.groupBox3.Location = new System.Drawing.Point(12, 134);
             this.groupBox3.Name = "groupBox3";
@@ -216,12 +216,13 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Filtrar Datos";
             // 
-            // textBox3
+            // txtFiltrarBusqueda
             // 
-            this.textBox3.Location = new System.Drawing.Point(81, 26);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(197, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtFiltrarBusqueda.Location = new System.Drawing.Point(81, 26);
+            this.txtFiltrarBusqueda.Name = "txtFiltrarBusqueda";
+            this.txtFiltrarBusqueda.Size = new System.Drawing.Size(197, 20);
+            this.txtFiltrarBusqueda.TabIndex = 6;
+            this.txtFiltrarBusqueda.TextChanged += new System.EventHandler(this.txtFiltrarBusqueda_TextChanged);
             // 
             // TablaAlergiasPersona
             // 
@@ -322,7 +323,7 @@
         private System.Windows.Forms.Button buttonEliminarComponenteAlergico;
         private System.Windows.Forms.Button buttonBuscarPersona;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtFiltrarBusqueda;
         private System.Windows.Forms.Button buttonAgregarComponente;
         private System.Windows.Forms.Button buttonLimpiarPersona;
         private System.Windows.Forms.Button buttonLimpiarComponente;

@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.tablaGestionarPersona = new System.Windows.Forms.DataGridView();
             this.txtCedula = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
@@ -43,12 +49,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tablaGestionarPersona = new System.Windows.Forms.DataGridView();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaGestionarPersona)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +56,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnBuscar);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtBuscar);
@@ -82,13 +82,76 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gestionar Persona";
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(558, 23);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 21;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(96, 24);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(79, 20);
+            this.txtID.TabIndex = 20;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(16, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Id";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(256, 27);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Buscar";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(302, 24);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(239, 20);
+            this.txtBuscar.TabIndex = 17;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
+            // tablaGestionarPersona
+            // 
+            this.tablaGestionarPersona.AllowUserToAddRows = false;
+            this.tablaGestionarPersona.AllowUserToDeleteRows = false;
+            this.tablaGestionarPersona.AllowUserToResizeColumns = false;
+            this.tablaGestionarPersona.AllowUserToResizeRows = false;
+            this.tablaGestionarPersona.CausesValidation = false;
+            this.tablaGestionarPersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaGestionarPersona.Location = new System.Drawing.Point(259, 63);
+            this.tablaGestionarPersona.MultiSelect = false;
+            this.tablaGestionarPersona.Name = "tablaGestionarPersona";
+            this.tablaGestionarPersona.ReadOnly = true;
+            this.tablaGestionarPersona.ShowCellErrors = false;
+            this.tablaGestionarPersona.ShowCellToolTips = false;
+            this.tablaGestionarPersona.ShowEditingIcon = false;
+            this.tablaGestionarPersona.ShowRowErrors = false;
+            this.tablaGestionarPersona.Size = new System.Drawing.Size(465, 267);
+            this.tablaGestionarPersona.TabIndex = 16;
+            this.tablaGestionarPersona.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tablaGestionarPersona_MouseClick);
+            // 
             // txtCedula
             // 
             this.txtCedula.Location = new System.Drawing.Point(96, 257);
             this.txtCedula.Mask = "000-0000000-0";
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.PromptChar = 'X';
-            this.txtCedula.Size = new System.Drawing.Size(121, 20);
+            this.txtCedula.Size = new System.Drawing.Size(109, 20);
             this.txtCedula.TabIndex = 15;
             // 
             // label6
@@ -117,6 +180,7 @@
             this.btnGuardar.TabIndex = 12;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtSexo
             // 
@@ -126,7 +190,7 @@
             "Femenino"});
             this.txtSexo.Location = new System.Drawing.Point(96, 176);
             this.txtSexo.Name = "txtSexo";
-            this.txtSexo.Size = new System.Drawing.Size(121, 21);
+            this.txtSexo.Size = new System.Drawing.Size(79, 21);
             this.txtSexo.TabIndex = 11;
             this.txtSexo.Text = "Masculino";
             // 
@@ -147,7 +211,7 @@
             "Empleado"});
             this.txtTipo_Persona.Location = new System.Drawing.Point(96, 215);
             this.txtTipo_Persona.Name = "txtTipo_Persona";
-            this.txtTipo_Persona.Size = new System.Drawing.Size(121, 21);
+            this.txtTipo_Persona.Size = new System.Drawing.Size(79, 21);
             this.txtTipo_Persona.TabIndex = 9;
             this.txtTipo_Persona.Text = "Paciente";
             // 
@@ -164,8 +228,9 @@
             // 
             this.txtEdad.Location = new System.Drawing.Point(96, 140);
             this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(121, 20);
+            this.txtEdad.Size = new System.Drawing.Size(35, 20);
             this.txtEdad.TabIndex = 5;
+            this.txtEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress);
             // 
             // label3
             // 
@@ -196,7 +261,7 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(96, 64);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(121, 20);
+            this.txtNombre.Size = new System.Drawing.Size(79, 20);
             this.txtNombre.TabIndex = 1;
             // 
             // label1
@@ -208,64 +273,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
-            // tablaGestionarPersona
-            // 
-            this.tablaGestionarPersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaGestionarPersona.Location = new System.Drawing.Point(259, 63);
-            this.tablaGestionarPersona.Name = "tablaGestionarPersona";
-            this.tablaGestionarPersona.Size = new System.Drawing.Size(465, 267);
-            this.tablaGestionarPersona.TabIndex = 16;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(302, 24);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(239, 20);
-            this.txtBuscar.TabIndex = 17;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 27);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 13);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Id";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(96, 24);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(79, 20);
-            this.textBox2.TabIndex = 20;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(558, 23);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 21;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(256, 27);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Buscar";
-            // 
             // GestionPersonas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 376);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "GestionPersonas";
-            this.Text = "GestionPersonas";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Gestion Personas";
+            this.Load += new System.EventHandler(this.GestionPersonas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaGestionarPersona)).EndInit();
@@ -292,7 +312,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView tablaGestionarPersona;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label7;

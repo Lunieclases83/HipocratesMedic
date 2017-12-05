@@ -147,5 +147,10 @@ namespace ProyectoMedicacion.Vistas
                 }
             }
         }
+
+        private void txtFiltrarBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            (TablaAlergiasPersona.DataSource as DataTable).DefaultView.RowFilter = string.Format("Componente LIKE '{0}%' OR Componente LIKE '% {0}%'", txtFiltrarBusqueda.Text);
+        }
     }
 }

@@ -50,5 +50,28 @@ namespace ProyectoMedicacion.Controles
             finally { Data_Persistance.Conexion.CerrarConexion(); }
         }
 
+        public static void ActualizarPersona(string id, string nom, string ape, string edad, string tipo, string sexo, string cedu)
+        {
+            try
+            {
+                ProyectoMedicacion.Data_Persistance.Conexion.ejecutaProcedure("ActualizarPersona",
+               new List<System.Data.SqlClient.SqlParameter>(){
+               new System.Data.SqlClient.SqlParameter("@Id",id),
+               new System.Data.SqlClient.SqlParameter("@Nombre",nom),
+               new System.Data.SqlClient.SqlParameter("@Apellido",ape),
+               new System.Data.SqlClient.SqlParameter("@Edad",edad),
+               new System.Data.SqlClient.SqlParameter("@Tipo",tipo),
+               new System.Data.SqlClient.SqlParameter("@Sexo",sexo),
+               new System.Data.SqlClient.SqlParameter("@Cedula",cedu)
+
+          });
+            }
+            catch (System.Data.SqlClient.SqlException sqlex)
+            {
+                throw sqlex;
+            }
+            finally { Data_Persistance.Conexion.CerrarConexion(); }
+        }
+
     }
 }

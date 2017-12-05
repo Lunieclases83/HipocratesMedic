@@ -24,7 +24,7 @@ namespace ProyectoMedicacion.SubVistas
 
         private void textBoxFiltrarBusquedaPersona_TextChanged(object sender, EventArgs e)
         {
-            (TablaPersonas.DataSource as DataTable).DefaultView.RowFilter = string.Format("Nombre_Persona LIKE '{0}%' OR Nombre_Persona LIKE '% {0}%' OR Apellido_Persona LIKE '{0}%' OR Apellido_Persona LIKE '% {0}%'  ", textBoxFiltrarBusquedaPersona.Text);
+            (TablaPersonas.DataSource as DataTable).DefaultView.RowFilter = string.Format("Nombre_Persona LIKE '{0}%' OR Nombre_Persona LIKE '% {0}%' OR Apellido_Persona LIKE '{0}%' OR Apellido_Persona LIKE '% {0}%' OR Cedula_Persona LIKE '{0}%' OR Cedula_Persona LIKE '% {0}%'", textBoxFiltrarBusquedaPersona.Text);
 
             
         }
