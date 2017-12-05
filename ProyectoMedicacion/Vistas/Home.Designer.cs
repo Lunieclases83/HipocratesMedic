@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelUsuarios = new System.Windows.Forms.Panel();
@@ -61,6 +62,14 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Logo = new System.Windows.Forms.PictureBox();
+            this.labelHora = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.textIdUsu = new System.Windows.Forms.TextBox();
+            this.textBoxUsuario = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.panelUsuarios.SuspendLayout();
             this.panelPersonas.SuspendLayout();
@@ -75,6 +84,9 @@
             this.panel11.SuspendLayout();
             this.panelInventario.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -405,6 +417,82 @@
             this.panel2.Size = new System.Drawing.Size(1374, 11);
             this.panel2.TabIndex = 3;
             // 
+            // Logo
+            // 
+            this.Logo.Image = global::ProyectoMedicacion.Properties.Resources.Logo;
+            this.Logo.Location = new System.Drawing.Point(-2, -2);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(328, 382);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Logo.TabIndex = 14;
+            this.Logo.TabStop = false;
+            // 
+            // labelHora
+            // 
+            this.labelHora.AutoSize = true;
+            this.labelHora.Font = new System.Drawing.Font("Roboto Condensed", 120F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHora.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.labelHora.Location = new System.Drawing.Point(6, 24);
+            this.labelHora.Name = "labelHora";
+            this.labelHora.Size = new System.Drawing.Size(628, 192);
+            this.labelHora.TabIndex = 15;
+            this.labelHora.Text = "10:00:00";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBoxUsuario);
+            this.groupBox1.Controls.Add(this.textIdUsu);
+            this.groupBox1.Controls.Add(this.textBoxNombre);
+            this.groupBox1.Location = new System.Drawing.Point(672, 24);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(301, 192);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Bienvenido";
+            // 
+            // textBoxNombre
+            // 
+            this.textBoxNombre.Location = new System.Drawing.Point(36, 85);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.ReadOnly = true;
+            this.textBoxNombre.Size = new System.Drawing.Size(247, 20);
+            this.textBoxNombre.TabIndex = 0;
+            this.textBoxNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textIdUsu
+            // 
+            this.textIdUsu.Location = new System.Drawing.Point(119, 44);
+            this.textIdUsu.Name = "textIdUsu";
+            this.textIdUsu.ReadOnly = true;
+            this.textIdUsu.Size = new System.Drawing.Size(72, 20);
+            this.textIdUsu.TabIndex = 1;
+            this.textIdUsu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxUsuario
+            // 
+            this.textBoxUsuario.Location = new System.Drawing.Point(81, 122);
+            this.textBoxUsuario.Name = "textBoxUsuario";
+            this.textBoxUsuario.ReadOnly = true;
+            this.textBoxUsuario.Size = new System.Drawing.Size(155, 20);
+            this.textBoxUsuario.TabIndex = 2;
+            this.textBoxUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.labelHora);
+            this.groupBox2.Controls.Add(this.groupBox1);
+            this.groupBox2.Location = new System.Drawing.Point(356, 59);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(996, 271);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,6 +500,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1364, 749);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.Logo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelInventario);
             this.Controls.Add(this.panel4);
@@ -463,6 +553,11 @@
             this.panelInventario.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -502,5 +597,13 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox Logo;
+        private System.Windows.Forms.Label labelHora;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBoxUsuario;
+        private System.Windows.Forms.TextBox textIdUsu;
+        private System.Windows.Forms.TextBox textBoxNombre;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -77,18 +78,45 @@ namespace ProyectoMedicacion.Vistas
                     panelInventario.Enabled = true;
                 }
 
-                
-              }
+                timer1.Start();
+
+            }
 
         }
 
-       
+        public void CargarBienvienida()
+        {
+            try
+            {
+                Data_Persistance.Conexion.CerrarConexion();
+                Data_Persistance.Conexion.AbrirConexion();
 
-        private void Home_Load(object sender, EventArgs e)
+                SqlCommand ComandoSQL2 = new SqlCommand("SELECT Nombre_Persona, Apellido_Persona from Persona, Usuario WHERE Usuario.Id_Persona = '" + Convert.ToInt32(Clases.Usuario.IdPersona) + "' AND Persona.Id_Persona = '" + Clases.Usuario.IdPersona + "'", Data_Persistance.Conexion.conn);
+
+                ComandoSQL2.ExecuteNonQuery();
+                DataSet ds = new DataSet();
+                SqlDataAdapter da = new SqlDataAdapter(ComandoSQL2);
+                da.Fill(ds, "Usuario");
+                DataRow dro;
+                dro = ds.Tables["Usuario"].Rows[0];
+
+                textBoxNombre.Text = dro["Nombre_Persona"].ToString() + " " + dro["Apellido_Persona"];
+                textIdUsu.Text = Clases.Usuario.IdUsuario.ToString();
+                textBoxUsuario.Text = Clases.Usuario.Nombre;
+
+                
+
+            }
+            catch (Exception e) { MessageBox.Show(e.ToString()); }
+            finally { Data_Persistance.Conexion.CerrarConexion(); }
+        }
+
+            private void Home_Load(object sender, EventArgs e)
         {
            Controles.ControlPermiso cp = new Controles.ControlPermiso();
            cp.CargarPermisosUsuario();
            DesbloquearModulos();
+            CargarBienvienida();
            
         }
 
@@ -176,6 +204,11 @@ namespace ProyectoMedicacion.Vistas
         {
             Vistas.ConsultaMedica cm = new Vistas.ConsultaMedica();
             cm.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.labelHora.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
     }
 }
