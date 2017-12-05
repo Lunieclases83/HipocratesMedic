@@ -54,6 +54,7 @@
             this.botonGuardar = new System.Windows.Forms.Button();
             this.buttonLimpiarCampos = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.buttonVerMedicamentos = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -64,7 +65,7 @@
             // textNombreMedicamento
             // 
             this.textNombreMedicamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textNombreMedicamento.Location = new System.Drawing.Point(174, 32);
+            this.textNombreMedicamento.Location = new System.Drawing.Point(174, 55);
             this.textNombreMedicamento.Name = "textNombreMedicamento";
             this.textNombreMedicamento.Size = new System.Drawing.Size(200, 20);
             this.textNombreMedicamento.TabIndex = 0;
@@ -74,7 +75,7 @@
             this.TextFechaExpiracion.CustomFormat = "yyyy-MM-dd";
             this.TextFechaExpiracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextFechaExpiracion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TextFechaExpiracion.Location = new System.Drawing.Point(174, 72);
+            this.TextFechaExpiracion.Location = new System.Drawing.Point(174, 95);
             this.TextFechaExpiracion.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.TextFechaExpiracion.Name = "TextFechaExpiracion";
             this.TextFechaExpiracion.Size = new System.Drawing.Size(128, 20);
@@ -83,7 +84,7 @@
             // TextIndicacionesMedicamento
             // 
             this.TextIndicacionesMedicamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextIndicacionesMedicamento.Location = new System.Drawing.Point(174, 175);
+            this.TextIndicacionesMedicamento.Location = new System.Drawing.Point(174, 198);
             this.TextIndicacionesMedicamento.Name = "TextIndicacionesMedicamento";
             this.TextIndicacionesMedicamento.Size = new System.Drawing.Size(200, 79);
             this.TextIndicacionesMedicamento.TabIndex = 2;
@@ -92,7 +93,7 @@
             // TextDosisMedicamento
             // 
             this.TextDosisMedicamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextDosisMedicamento.Location = new System.Drawing.Point(174, 281);
+            this.TextDosisMedicamento.Location = new System.Drawing.Point(174, 304);
             this.TextDosisMedicamento.Name = "TextDosisMedicamento";
             this.TextDosisMedicamento.Size = new System.Drawing.Size(200, 68);
             this.TextDosisMedicamento.TabIndex = 3;
@@ -106,7 +107,7 @@
             "Frasco",
             "Sobre",
             "Caja"});
-            this.TextContenedorMedicamento.Location = new System.Drawing.Point(174, 122);
+            this.TextContenedorMedicamento.Location = new System.Drawing.Point(174, 145);
             this.TextContenedorMedicamento.Name = "TextContenedorMedicamento";
             this.TextContenedorMedicamento.Size = new System.Drawing.Size(128, 21);
             this.TextContenedorMedicamento.TabIndex = 4;
@@ -116,7 +117,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 35);
+            this.label1.Location = new System.Drawing.Point(17, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 13);
             this.label1.TabIndex = 5;
@@ -126,7 +127,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 74);
+            this.label2.Location = new System.Drawing.Point(17, 97);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 13);
             this.label2.TabIndex = 6;
@@ -136,7 +137,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 124);
+            this.label3.Location = new System.Drawing.Point(17, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 13);
             this.label3.TabIndex = 7;
@@ -146,7 +147,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 176);
+            this.label4.Location = new System.Drawing.Point(17, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 13);
             this.label4.TabIndex = 8;
@@ -157,7 +158,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 283);
+            this.label5.Location = new System.Drawing.Point(17, 306);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(117, 13);
             this.label5.TabIndex = 9;
@@ -165,6 +166,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonVerMedicamentos);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.TextDosisMedicamento);
@@ -340,7 +342,7 @@
             // botonGuardar
             // 
             this.botonGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonGuardar.Location = new System.Drawing.Point(130, 16);
+            this.botonGuardar.Location = new System.Drawing.Point(139, 19);
             this.botonGuardar.Name = "botonGuardar";
             this.botonGuardar.Size = new System.Drawing.Size(90, 53);
             this.botonGuardar.TabIndex = 13;
@@ -351,7 +353,7 @@
             // buttonLimpiarCampos
             // 
             this.buttonLimpiarCampos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLimpiarCampos.Location = new System.Drawing.Point(34, 16);
+            this.buttonLimpiarCampos.Location = new System.Drawing.Point(6, 19);
             this.buttonLimpiarCampos.Name = "buttonLimpiarCampos";
             this.buttonLimpiarCampos.Size = new System.Drawing.Size(90, 53);
             this.buttonLimpiarCampos.TabIndex = 14;
@@ -363,12 +365,23 @@
             // 
             this.groupBox4.Controls.Add(this.buttonLimpiarCampos);
             this.groupBox4.Controls.Add(this.botonGuardar);
-            this.groupBox4.Location = new System.Drawing.Point(108, 415);
+            this.groupBox4.Location = new System.Drawing.Point(104, 420);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(241, 83);
+            this.groupBox4.Size = new System.Drawing.Size(248, 83);
             this.groupBox4.TabIndex = 15;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Acciones Generales";
+            // 
+            // buttonVerMedicamentos
+            // 
+            this.buttonVerMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVerMedicamentos.Location = new System.Drawing.Point(253, 11);
+            this.buttonVerMedicamentos.Name = "buttonVerMedicamentos";
+            this.buttonVerMedicamentos.Size = new System.Drawing.Size(154, 21);
+            this.buttonVerMedicamentos.TabIndex = 15;
+            this.buttonVerMedicamentos.Text = "Registro de Medicamentos";
+            this.buttonVerMedicamentos.UseVisualStyleBackColor = true;
+            this.buttonVerMedicamentos.Click += new System.EventHandler(this.buttonVerMedicamentos_Click);
             // 
             // AgregarMedicamento
             // 
@@ -427,5 +440,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonDeseleccionarChecks;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button buttonVerMedicamentos;
     }
 }

@@ -255,6 +255,13 @@ namespace ProyectoMedicacion.Vistas
         {
             Clases.Componente.IdComponente = 0;
         }
+
+        private void buttonVerMedicamentos_Click(object sender, EventArgs e)
+        {
+           
+            SubVistas.Medicamentos m = new SubVistas.Medicamentos();
+            m.ShowDialog();
+        }
     }
     }
 

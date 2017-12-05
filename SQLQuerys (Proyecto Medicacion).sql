@@ -15,7 +15,7 @@ SELECT Medicamento.Id_Medicamento, Medicamento.Nombre_Medicamento
 		INNER JOIN Sintoma ON Sintoma_Medicamento.Id_Sintoma = Sintoma.Id_Sintoma
 WHERE Sintoma.Id_Sintoma = 1 ;
 
-/**-------------------------BUSCAR MEDICAMENTOS QUE CONTENGAN X COMPONENTE-------------------------------*/
+/*-------------------------BUSCAR MEDICAMENTOS QUE CONTENGAN X COMPONENTE-------------------------------*/
 SELECT  Medicamento.Id_Medicamento, Medicamento.Nombre_Medicamento 
 	FROM Medicamento
 		INNER JOIN Composicion_Medicamento ON Composicion_Medicamento.Id_Medicamento = Medicamento.Id_Medicamento

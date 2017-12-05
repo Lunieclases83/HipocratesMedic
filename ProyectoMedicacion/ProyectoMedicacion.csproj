@@ -84,6 +84,12 @@
     <Compile Include="SubVistas\ComponentesEnAgregarMedicamentos.Designer.cs">
       <DependentUpon>ComponentesEnAgregarMedicamentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubVistas\Medicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubVistas\Medicamentos.Designer.cs">
+      <DependentUpon>Medicamentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubVistas\PersonasEnAlergias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="SubVistas\ComponentesEnAgregarMedicamentos.resx">
       <DependentUpon>ComponentesEnAgregarMedicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubVistas\Medicamentos.resx">
+      <DependentUpon>Medicamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubVistas\PersonasEnAlergias.resx">
       <DependentUpon>PersonasEnAlergias.cs</DependentUpon>

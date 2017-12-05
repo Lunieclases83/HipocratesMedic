@@ -1,5 +1,8 @@
-﻿SELECT  Medicamento.Id_Medicamento, Medicamento.Nombre_Medicamento 
-	FROM Medicamento
-		LEFT JOIN Composicion_Medicamento ON Composicion_Medicamento.Id_Medicamento = Medicamento.Id_Medicamento
-		LEFT JOIN Componente ON Composicion_Medicamento.Id_Componente = Componente.Id_Componente
-WHERE NOT EXISTS (SELECT * FROM Componente WHERE Id_Componente = 2)
+﻿
+SELECT Sintoma.Nombre_Sintoma FROM Sintoma
+	JOIN Sintoma_Medicamento ON Sintoma_Medicamento.Id_Sintoma = Sintoma.Id_Sintoma
+	JOIN Medicamento ON Sintoma_Medicamento.Id_Medicamento = Medicamento.Id_Medicamento
+	
+	WHERE Medicamento.Id_Medicamento = 19
+
+	select * from Medicamento
