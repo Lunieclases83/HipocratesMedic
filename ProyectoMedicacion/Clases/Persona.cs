@@ -14,6 +14,7 @@ namespace ProyectoMedicacion.Clases
         public static int Edad{ get; set; }
         public static string Tipo { get; set; }
         public static string Sexo { get; set; }
+        public static string Cedula { get; set; }
     
 
     }

@@ -29,25 +29,26 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCedula = new System.Windows.Forms.MaskedTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.txtSexo = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTipo_Persona = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtEdad = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtTipo_Persona = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtSexo = new System.Windows.Forms.ComboBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtCedula = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtEdad);
             this.groupBox1.Controls.Add(this.txtCedula);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.btnLimpiar);
@@ -56,7 +57,6 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtTipo_Persona);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtEdad);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtApellido);
             this.groupBox1.Controls.Add(this.label2);
@@ -69,21 +69,93 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Persona";
             // 
-            // label1
+            // txtCedula
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre";
+            this.txtCedula.Location = new System.Drawing.Point(96, 217);
+            this.txtCedula.Mask = "000-0000000-0";
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(121, 20);
+            this.txtCedula.TabIndex = 15;
             // 
-            // txtNombre
+            // label6
             // 
-            this.txtNombre.Location = new System.Drawing.Point(96, 24);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(121, 20);
-            this.txtNombre.TabIndex = 1;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 220);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Cédula";
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(130, 267);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.TabIndex = 13;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(29, 267);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 12;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // txtSexo
+            // 
+            this.txtSexo.FormattingEnabled = true;
+            this.txtSexo.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
+            this.txtSexo.Location = new System.Drawing.Point(96, 136);
+            this.txtSexo.Name = "txtSexo";
+            this.txtSexo.Size = new System.Drawing.Size(121, 21);
+            this.txtSexo.TabIndex = 11;
+            this.txtSexo.Text = "Masculino";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 178);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(85, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Tipo de Persona";
+            // 
+            // txtTipo_Persona
+            // 
+            this.txtTipo_Persona.FormattingEnabled = true;
+            this.txtTipo_Persona.Items.AddRange(new object[] {
+            "Paciente",
+            "Empleado"});
+            this.txtTipo_Persona.Location = new System.Drawing.Point(96, 175);
+            this.txtTipo_Persona.Name = "txtTipo_Persona";
+            this.txtTipo_Persona.Size = new System.Drawing.Size(121, 21);
+            this.txtTipo_Persona.TabIndex = 9;
+            this.txtTipo_Persona.Text = "Paciente";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 139);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Sexo";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 103);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Edad";
             // 
             // txtApellido
             // 
@@ -101,98 +173,29 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Apellido";
             // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(96, 24);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(121, 20);
+            this.txtNombre.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nombre";
+            // 
             // txtEdad
             // 
-            this.txtEdad.Location = new System.Drawing.Point(96, 100);
+            this.txtEdad.Location = new System.Drawing.Point(96, 96);
             this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(121, 20);
-            this.txtEdad.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 103);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Edad";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 139);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Sexo";
-            // 
-            // txtTipo_Persona
-            // 
-            this.txtTipo_Persona.FormattingEnabled = true;
-            this.txtTipo_Persona.Items.AddRange(new object[] {
-            "Paciente",
-            "Empleado"});
-            this.txtTipo_Persona.Location = new System.Drawing.Point(96, 175);
-            this.txtTipo_Persona.Name = "txtTipo_Persona";
-            this.txtTipo_Persona.Size = new System.Drawing.Size(121, 21);
-            this.txtTipo_Persona.TabIndex = 9;
-            this.txtTipo_Persona.Text = "Paciente";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 178);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Tipo de Persona";
-            // 
-            // txtSexo
-            // 
-            this.txtSexo.FormattingEnabled = true;
-            this.txtSexo.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino"});
-            this.txtSexo.Location = new System.Drawing.Point(96, 136);
-            this.txtSexo.Name = "txtSexo";
-            this.txtSexo.Size = new System.Drawing.Size(121, 21);
-            this.txtSexo.TabIndex = 11;
-            this.txtSexo.Text = "Masculino";
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(29, 267);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 12;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(130, 267);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpiar.TabIndex = 13;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 220);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Cédula";
-            // 
-            // txtCedula
-            // 
-            this.txtCedula.Location = new System.Drawing.Point(96, 217);
-            this.txtCedula.Mask = "000-0000000-0";
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(121, 20);
-            this.txtCedula.TabIndex = 15;
+            this.txtEdad.Size = new System.Drawing.Size(51, 20);
+            this.txtEdad.TabIndex = 16;
+            this.txtEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress);
             // 
             // AgregarPersonas
             // 
@@ -200,11 +203,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(271, 330);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AgregarPersonas";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AgregarPersonas";
+            this.Text = "Agregar Personas";
             this.Load += new System.EventHandler(this.AgregarPersonas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -220,7 +225,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox txtTipo_Persona;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label label2;
@@ -229,5 +233,6 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.MaskedTextBox txtCedula;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtEdad;
     }
 }
